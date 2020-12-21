@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="heading">
+        Super-pixelation
+    </h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" id="first">
+                <label for="file" style="cursor: pointer;">
+                    <img id="input" width="500" height="400" src="upload.jpg" />
+                    <p class="btn btn-primary btn-lg btn-block">Upload Image</p>
+                </label>
+                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                    style="display: none;">
+
+            </div>
+
+            <div class="col" id="second">
+
+                <img id="output" width="500" height="400"
+                    src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" />
+                <br>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-lg" onclick="generate(event)">Generate</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="download(event)">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+<script src="script.js"></script>
+
+</html>
